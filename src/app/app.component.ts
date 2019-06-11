@@ -16,8 +16,18 @@ export class AppComponent {
 
   // firstTask: Task = new Task("Finsish Angular homework and watch video");
   tasks: Task [] = [
-    new Task('Finish Angular homework'), 
-    new Task('Watch Mosh video')
+    new Task('Finish Angular homework', 1), 
+    new Task('Watch Mosh video', 1)
   ];
+
+  priorityColor(currentTask) {
+    if (currentTask.priority === 3) {
+      return "bg-info";
+    } else if (currentTask.priority === 2) {
+      return "bg-warning";
+    } else {
+      return "bg-danger";
+    }
+  }
 }
 
