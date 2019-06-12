@@ -20,6 +20,9 @@ export class AppComponent {
     new Task('Come up with Friday project', 2)
   ];
 
+  addTask(newTask: Task) {
+    this.masterTaskList.push(newTask);
+  }
   selectedTask = null;
   editButtonClicked(clickedTask) {
     this.selectedTask = clickedTask;

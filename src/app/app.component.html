@@ -8,3 +8,4 @@
 
 
 <edit-task [childSelectedTask]="selectedTask" (clickedDone)="finishedEditing()"></edit-task>
+<new-task (sendTask)="addTask($event)"></new-task>
