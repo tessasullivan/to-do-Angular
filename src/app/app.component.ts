@@ -24,7 +24,7 @@ export class AppComponent {
   editButtonClicked(clickedTask) {
     this.selectedTask = clickedTask;
   }
-  finsishedEditing() {
+  finishedEditing() {
     this.selectedTask = null;
   }
 }
