@@ -11,6 +11,8 @@ export class TaskListComponent{
   @Input() childTaskList: Task[];
   @Output() clickSender = new EventEmitter();
 
+  filterByCompleteness: string = "incompleteTasks";
+
   editButtonClicked(taskToEdit: Task) {
     this.clickSender.emit(taskToEdit);
   }
@@ -23,5 +25,7 @@ export class TaskListComponent{
       return "bg-danger";
     }
   }
-
+  onChange(optionFromMenu) {
+    this.filterByCompleteness = optionFromMenu;
+  }
 }

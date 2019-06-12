@@ -13,6 +13,7 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
+  selectedTask = null;
 
   masterTaskList: Task [] = [
     new Task('Finish Angular homework', 1), 
@@ -23,7 +24,6 @@ export class AppComponent {
   addTask(newTask: Task) {
     this.masterTaskList.push(newTask);
   }
-  selectedTask = null;
   editButtonClicked(clickedTask) {
     this.selectedTask = clickedTask;
   }
