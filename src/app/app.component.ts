@@ -14,10 +14,10 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
 
-  // firstTask: Task = new Task("Finsish Angular homework and watch video");
   tasks: Task [] = [
     new Task('Finish Angular homework', 1), 
-    new Task('Watch Mosh video', 1)
+    new Task('Watch Mosh video', 1),
+    new Task('Come up with Friday project', 2)
   ];
 
   priorityColor(currentTask) {
@@ -28,6 +28,13 @@ export class AppComponent {
     } else {
       return "bg-danger";
     }
+  }
+  selectedTask = null;
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
+  }
+  finsishedEditing() {
+    this.selectedTask = null;
   }
 }
 
