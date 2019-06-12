@@ -4,9 +4,8 @@
   <h3>{{ currentFocus }}</h3>
 </div>
 
-<ul>
-  <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}} <button (click)="editTask(currentTask)">Edit</button></li>
-</ul>
+<task-list></task-list>
+
 <div *ngIf="selectedTask">
   <h3>{{selectedTask.description}}</h3>
   <p>Task Complete? {{selectedTask.done}}</p>

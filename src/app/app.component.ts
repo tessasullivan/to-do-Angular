@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Task } from './models/task.model';
 
 @Component({
   selector: 'app-root',
@@ -14,21 +13,6 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
 
-  tasks: Task [] = [
-    new Task('Finish Angular homework', 1), 
-    new Task('Watch Mosh video', 1),
-    new Task('Come up with Friday project', 2)
-  ];
-
-  priorityColor(currentTask) {
-    if (currentTask.priority == 3) {
-      return "bg-info";
-    } else if (currentTask.priority == 2) {
-      return "bg-warning";
-    } else {
-      return "bg-danger";
-    }
-  }
   selectedTask = null;
   editTask(clickedTask) {
     this.selectedTask = clickedTask;
