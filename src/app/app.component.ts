@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from './models/task.model';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,12 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
+
+  masterTaskList: Task [] = [
+    new Task('Finish Angular homework', 1), 
+    new Task('Watch Mosh video', 1),
+    new Task('Come up with Friday project', 2)
+  ];
 
   selectedTask = null;
   editTask(clickedTask) {

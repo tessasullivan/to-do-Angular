@@ -1,5 +1,5 @@
+import { Component, Input } from '@angular/core';
 import { Task } from '../models/task.model';
-import { Component } from '@angular/core';
 
 @Component({
   selector: 'task-list',
@@ -7,12 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent{
-  tasks: Task [] = [
-    new Task('Finish Angular homework', 1), 
-    new Task('Watch Mosh video', 1),
-    new Task('Come up with Friday project', 2)
-  ];
 
+  @Input() childTaskList: Task[];
+  
   priorityColor(currentTask) {
     if (currentTask.priority == 3) {
       return "bg-info";

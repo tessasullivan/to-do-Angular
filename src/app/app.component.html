@@ -4,7 +4,7 @@
   <h3>{{ currentFocus }}</h3>
 </div>
 
-<task-list></task-list>
+<task-list [childTaskList]="masterTaskList"></task-list>
 
 <div *ngIf="selectedTask">
   <h3>{{selectedTask.description}}</h3>
